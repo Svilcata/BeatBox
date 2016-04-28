@@ -1,13 +1,16 @@
 package com.svilcata.beatbox;
 
+import android.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
-public class BeatBoxActivity extends AppCompatActivity {
+
+public class BeatBoxActivity extends SingleFragmentActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_beat_box);
+    protected Fragment createFragment() {
+        return BeatBoxFragment.newInstance();
     }
 }
